@@ -1,0 +1,47 @@
+.custom-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.custom-separator::before,
+.custom-separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #6c757d;
+}
+.custom-separator::before {
+  margin-right: 10px;
+}
+.custom-separator::after {
+  margin-left: 10px;
+}
+.custom-separator .circle {
+  width: 10px;
+  height: 10px;
+  background-color: #6c757d;
+  border-radius: 50%;
+}
+
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: transparent;
+  border: .5px solid #19e22b;
+  transition: background-color 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-check-input:checked {
+  background-color: #19e22b;
+  border-color: #19e22b;
+}
+.form-check-input:checked::after {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  display: block;
+}

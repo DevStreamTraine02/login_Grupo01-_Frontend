@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <div class="d-flex flex-column align-items-center text-center">
+    <h1 class="fw-bold">Propón tu nueva contraseña</h1>
+    <div class="row justify-content-center">
+      <p class="pt-4 col-md-8 col-lg-6">
+        Por favor ingresa la clave temporal que te hemos enviado al correo
+        electónico o celular, en esta sección debes proponer tu nueva contraseña
+        a usar.
+      </p>
+    </div>
+    
+    <form class="form" [formGroup]="formGroup">
+      <div class="row justify-content-center mt-5">
+        <div class="input-group mb-3">
+          <div class="col-auto">
+            <input
+              type="password"
+              formControlName="contraTemp"
+              class="form-control"
+              placeholder="Ingrese la contraseña enviada"
+            />
+          </div>
+          <span class="input-group-text">
+            <i id="password-icon" class="bi bi-eye"></i>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="input-group mb-3">
+          <div class="col-auto">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Ingrese una nueva contraseña"
+            />
+          </div>
+          <span class="input-group-text">
+            <i id="password-icon" class="bi bi-eye"></i>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="input-group mb-3">
+          <div class="col-auto">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Repita la contraseña"
+            />
+          </div>
+          <span class="input-group-text">
+            <i id="password-icon" class="bi bi-eye"></i>
+          </span>
+        </div>
+      </div>
+      <a class="btn btn-info text-white fw-bold mt-5" (click)="clickRegister" href="/auth/login" >Finalizar</a>
+    </form>
+  </div>
+</div>

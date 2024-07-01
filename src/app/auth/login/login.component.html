@@ -1,0 +1,100 @@
+<div class="container-fluid mt-3">
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-info text-white fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Login
+    </button>
+  </div>
+  <div class="container mt-3">
+    <div class="text-center">
+      <h1 class="fw-bold">Aprende, analiza</h1>
+      <h1 class="fw-bold">A tu ritmo, donde quieras</h1>
+      <p class="pt-4">
+        DevStream te ofrece su plataforma de autoestudio para el seguimiento y
+        cumplimiento de objetivos
+      </p>
+      <img class="img-fluid" src="../../../assets/bg-login.png" alt="bg-login" width="1000px" />
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-sm-6 col-md-3 mb-3">
+        <div class="bg-secondary-subtle p-3 rounded h-100">
+          <h5 class="text-center">IA</h5>
+          <p class="text-secondary pt-2">
+            Potenciemos el uso de la IA en el desarrollo de sw
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-3">
+        <div class="bg-secondary-subtle p-3 rounded h-100">
+          <h5 class="text-center">DEVOPS</h5>
+          <p class="text-secondary pt-2">
+            Aprende herramientas para adoptar DEVOPS
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-3">
+        <div class="bg-secondary-subtle p-3 rounded h-100">
+          <h5 class="text-center">PROYECTOS</h5>
+          <p class="text-secondary pt-2">
+            Aprende herramientas para adoptar DEVOPS
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 mb-3">
+        <div class="bg-secondary-subtle p-3 rounded h-100">
+          <h5 class="text-center">WIKI</h5>
+          <p class="text-secondary pt-2">
+            Material práctico para el inicio de tus retos y proyectos
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body ms-4 me-4">
+        <h3 class="modal-title">Bienvenido nuevamente</h3>
+        <p class="text-secondary mt-4 mb-4">
+          Si eres colaborador de DevStream ingresan con tu cuenta de Office
+        </p>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-outline-secondary" (click)="onMicrosoftLogin()">
+            <img src="../../../assets/microsoft.png" alt="microsoft" width="15px" />
+            <span class="ms-2">Sign in with Microsoft</span>
+          </button>
+        </div>
+        <!-- Custom Separator -->
+        <div class="custom-separator my-4">
+          <div class="circle"></div>
+        </div>
+        <p class="text-secondary">
+          Si aún eres un estudiante ingresa tu usuario y contraseña
+        </p>
+        <div class="d-flex flex-column align-items-start">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Ingrese su usuario" [(ngModel)]="username" />
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Ingrese su contraseña" [(ngModel)]="password" />
+          </div>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label text-secondary">
+            <input class="form-check-input" type="checkbox" value="" />
+            Recordarme
+          </label>
+        </div>
+        <div class="d-flex justify-content-end mt-5 mb-5">
+          <a class="text-info" href="/auth/restore-password" style="text-decoration: none">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" (click)="onLogin()">Acceder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
